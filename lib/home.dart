@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:appuni2day/main.dart';
+import 'package:appuni2day/login.dart';
+import 'package:appuni2day/cadastro.dart';
 
 
 const IconData home = IconData(0xe318, fontFamily: 'MaterialIcons');
@@ -22,7 +25,6 @@ class Home extends StatelessWidget {
                 color: Color(0xff172a3a),
             ),
 
-            SizedBox(height: 10.0),
             Text(
               'Seja bem-vindo(a)',
               style: TextStyle(
@@ -32,13 +34,13 @@ class Home extends StatelessWidget {
               ),
             ),
 
-
-            
             const SizedBox(height: 30.0), // Espaçamento entre os campos e o botão
-            // Botão de login
             ElevatedButton(
-              onPressed: () {
-              // Lógica de autenticação aqui
+                onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Cadastro()),
+              );
             },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromARGB(255, 255, 255, 255),
@@ -54,8 +56,11 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 10.0),
               ElevatedButton(
-              onPressed: () {
-              // Lógica de autenticação aqui
+                onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Login()),
+              );
             },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromARGB(255, 255, 255, 255),
@@ -70,10 +75,23 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 50.0),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                  context,
+                    MaterialPageRoute(
+                      builder: (context) => MainApp(),
+                    ),
+                  );
+                },
+                child: Image.asset(
+                'assets/prosseguir.png',
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-

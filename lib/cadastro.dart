@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:appuni2day/login.dart';
+import 'package:appuni2day/home.dart';
 
 const IconData home = IconData(0xe318, fontFamily: 'MaterialIcons');
 class Cadastro extends StatelessWidget {
@@ -84,6 +85,7 @@ class Cadastro extends StatelessWidget {
                   ),
                 ),
               ),
+
           ],
         ),
       ),
@@ -97,9 +99,8 @@ class Cadastro extends StatelessWidget {
             size: 36.0,
           ),
           onPressed: () {
-             Navigator.push(context,
-            MaterialPageRoute(builder: (context) => Login()),
-            );}
+            Navigator.pop(context);
+          },
         ),
       ),
     );

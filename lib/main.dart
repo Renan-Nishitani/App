@@ -164,9 +164,8 @@ class MainApp extends StatelessWidget {
               size: 36.0, // Tamanho do ícone
             ),
             onPressed: () {
-            Navigator.push(context,
-            MaterialPageRoute(builder: (context) => Cadastro()),
-            );}
+            Navigator.pop(context);
+          },
           ),
         ),
       ),
