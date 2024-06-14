@@ -34,6 +34,7 @@ class Login extends StatelessWidget {
             // Caixa de texto para o usuário
             TextFormField(
               decoration: InputDecoration(
+                icon: Icon(Icons.person),
                 labelText: 'Inserir usuário',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
@@ -45,6 +46,7 @@ class Login extends StatelessWidget {
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
+                icon: Icon(Icons.lock),
                 labelText: 'Inserir senha',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
