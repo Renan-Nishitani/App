@@ -1,13 +1,13 @@
+import 'package:flutter/material.dart';
 import 'package:appuni2day/facul1.dart';
 import 'package:appuni2day/facul2.dart';
-import 'package:flutter/material.dart';
+import 'package:appuni2day/login.dart';
 import 'package:appuni2day/facul3.dart';
 import 'package:appuni2day/facul4.dart';
 import 'package:appuni2day/cadastro.dart';
 import 'package:appuni2day/home.dart';
+
 const IconData home = IconData(0xe318, fontFamily: 'MaterialIcons');
-
-
 
 void main() {
   runApp(const MaterialApp(
@@ -21,6 +21,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final usuario = ModalRoute.of(context)!.settings.arguments as Usuario?;
+
+    // Verifica se o usuário é nulo e define um nome padrão
+    final nomeUsuario = usuario?.nome ?? 'Usuário Desconhecido';
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -30,11 +35,20 @@ class MainApp extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const SizedBox(height: 100.0),
-            const Center(
+            const SizedBox(height: 70.0),
+            Center(
               child: Column(
                 children: [
                   Text(
+                    'Você se logou como: $nomeUsuario',
+                    style: const TextStyle(
+                      fontSize: 24.0, // Tamanho do texto
+                      fontWeight: FontWeight.bold, // Negrito
+                      color: Color(0xff172a3a), // Cor do texto
+                    ),
+                  ),
+                  SizedBox(height: 20.0),
+                  const Text(
                     '4 Principais',
                     style: TextStyle(
                       fontSize: 40.0, // Tamanho do texto
@@ -63,7 +77,7 @@ class MainApp extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
+            SizedBox(
                 height:
                     100.0), // Adicionando espaçamento entre o texto e os botões
             Center(
@@ -87,7 +101,7 @@ class MainApp extends StatelessWidget {
                           height: 100,
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                           width:
                               20), // Adicionando espaçamento entre as imagens
                       InkWell(
@@ -107,7 +121,7 @@ class MainApp extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                       height:
                           100), // Adicionando espaçamento entre as linhas de imagens
                   Row(
@@ -128,7 +142,7 @@ class MainApp extends StatelessWidget {
                           height: 100, // Altura da imagem
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                           width:
                               20), // Adicionando espaçamento entre as imagens
                       InkWell(
@@ -164,8 +178,8 @@ class MainApp extends StatelessWidget {
               size: 36.0, // Tamanho do ícone
             ),
             onPressed: () {
-            Navigator.pop(context);
-          },
+              Navigator.pop(context);
+            },
           ),
         ),
       ),

@@ -3,8 +3,8 @@ import 'package:appuni2day/main.dart';
 import 'package:appuni2day/login.dart';
 import 'package:appuni2day/cadastro.dart';
 
-
 const IconData home = IconData(0xe318, fontFamily: 'MaterialIcons');
+
 class Home extends StatelessWidget {
   const Home({Key? key});
 
@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
                 width: double.infinity,
                 height: 450,
               ),
-                color: Color(0xff172a3a),
+              color: Color(0xff172a3a),
             ),
 
             Text(
@@ -34,58 +34,59 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 30.0), // Espaçamento entre os campos e o botão
+            const SizedBox(
+                height: 30.0), // Espaçamento entre os campos e o botão
             ElevatedButton(
-                onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Cadastro()),
-              );
-            },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                  shape: RoundedRectangleBorder(),
-                ),
-                child: const Text(
-                  'Cadastrar',
-                  style: TextStyle(
-                    color: Color(0xff172a3a),
-                    fontSize: 30.0, // Tamanho da fonte
-                  ),
-                ),
-              ),
-              const SizedBox(height: 10.0),
-              ElevatedButton(
-                onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Login()),
-              );
-            },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                  shape: RoundedRectangleBorder(),
-                ),
-                child: const Text(
-                  'Login',
-                  style: TextStyle(
-                    color: Color(0xff172a3a),
-                    fontSize: 30.0, 
-                    // Tamanho da fonte
-                  ),
-                ),
-              ),
-              const SizedBox(height: 50.0),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
+              onPressed: () {
+                Navigator.push(
                   context,
-                    MaterialPageRoute(
-                      builder: (context) => MainApp(),
-                    ),
-                  );
-                },
-                child: Image.asset(
+                  MaterialPageRoute(builder: (context) => Cadastro()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                shape: RoundedRectangleBorder(),
+              ),
+              child: const Text(
+                'Cadastrar',
+                style: TextStyle(
+                  color: Color(0xff172a3a),
+                  fontSize: 30.0, // Tamanho da fonte
+                ),
+              ),
+            ),
+            const SizedBox(height: 10.0),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Login()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                shape: RoundedRectangleBorder(),
+              ),
+              child: const Text(
+                'Login',
+                style: TextStyle(
+                  color: Color(0xff172a3a),
+                  fontSize: 30.0,
+                  // Tamanho da fonte
+                ),
+              ),
+            ),
+            const SizedBox(height: 40.0),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MainApp(),
+                  ),
+                );
+              },
+              child: Image.asset(
                 'assets/prosseguir.png',
               ),
             ),

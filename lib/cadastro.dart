@@ -1,8 +1,10 @@
+import 'package:appuni2day/main.dart';
 import 'package:flutter/material.dart';
 import 'package:appuni2day/login.dart';
 import 'package:appuni2day/home.dart';
 
 const IconData home = IconData(0xe318, fontFamily: 'MaterialIcons');
+
 class Cadastro extends StatelessWidget {
   const Cadastro({Key? key});
 
@@ -20,7 +22,7 @@ class Cadastro extends StatelessWidget {
                 width: double.infinity,
                 height: 300.0,
               ),
-                color: Color(0xff172a3a),
+              color: Color(0xff172a3a),
             ),
 
             SizedBox(height: 70.0),
@@ -33,7 +35,7 @@ class Cadastro extends StatelessWidget {
               ),
             ),
 
-             SizedBox(height: 60.0),
+            SizedBox(height: 60.0),
             // Caixa de texto para o usuário
             TextFormField(
               decoration: InputDecoration(
@@ -68,27 +70,32 @@ class Cadastro extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 60.0), // Espaçamento entre os campos e o botão
+            const SizedBox(
+                height: 60.0), // Espaçamento entre os campos e o botão
             // Botão de login
             ElevatedButton(
               onPressed: () {
-              // Lógica de autenticação aqui
-            },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff172a3a),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Login(),
                   ),
-                ),
-                child: const Text(
-                  'Cadastrar',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22.0, // Tamanho da fonte
-                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xff172a3a),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
               ),
-
+              child: const Text(
+                'Cadastrar',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22.0, // Tamanho da fonte
+                ),
+              ),
+            ),
           ],
         ),
       ),
