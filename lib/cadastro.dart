@@ -1,7 +1,6 @@
-import 'package:appuni2day/main.dart';
 import 'package:flutter/material.dart';
 import 'package:appuni2day/login.dart';
-import 'package:appuni2day/home.dart';
+
 
 const IconData home = IconData(0xe318, fontFamily: 'MaterialIcons');
 
@@ -18,7 +17,7 @@ class Cadastro extends StatelessWidget {
           children: [
             Container(
               child: Image.asset(
-                'assets/login.png', // Substitua pelo caminho da sua imagem
+                'assets/img/login.png', // Substitua pelo caminho da sua imagem
                 width: double.infinity,
                 height: 300.0,
               ),
@@ -35,7 +34,7 @@ class Cadastro extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 60.0),
+            const SizedBox(height: 60.0),
             // Caixa de texto para o usuário
             TextFormField(
               decoration: InputDecoration(
@@ -47,7 +46,7 @@ class Cadastro extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 20.0), // Espaçamento entre os campos
+            const SizedBox(height: 20.0), // Espaçamento entre os campos
             // Caixa de texto para a senha
             TextFormField(
               obscureText: true,

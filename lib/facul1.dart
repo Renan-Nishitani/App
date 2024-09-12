@@ -27,6 +27,7 @@ class Facul1 extends StatelessWidget {
                 // Alinha o conteúdo ao centro
                 child: Column(
                   children: [
+                    const SizedBox(height: 40),
                     const Text(
                       'USP',
                       style: TextStyle(
@@ -35,8 +36,7 @@ class Facul1 extends StatelessWidget {
                         color: Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
-                    const SizedBox(
-                        height: 10), // Adicionando um espaço entre os textos
+                    const SizedBox(height: 20), // Adicionando um espaço entre os textos
                     const Text(
                       'Criada em 1934, USP é uma universidade pública, mantida pelo Estado de São Paulo e ligada à Secretaria de Ciência, Tecnologia e Inovação. Sua graduação é formada por 183 cursos, dedicados a todas as áreas do conhecimento, distribuídos em 42 unidades de ensino e pesquisa, com mais de 58 mil alunos. A pós-graduação é composta por 239 programas com cerca de 30 mil matriculados. Atualmente, é responsável por mais de 20% da produção científica brasileira. A USP conta com diversos campi, distribuídos pelas cidades de São Paulo, Bauru, Lorena, Piracicaba, Pirassununga, Ribeirão Preto, Santos, São Carlos, além de unidades de ensino, museus e centros de pesquisa.',
                       textAlign: TextAlign.justify,
@@ -47,66 +47,31 @@ class Facul1 extends StatelessWidget {
                     ),
                     const SizedBox(height: 30.0),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
                           width: 200.0,
-                          margin: const EdgeInsets.only(top: 70.0, left: 10.0),
+                          margin: const EdgeInsets.only(right: 5.0), // Espaço entre as imagens
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(
-                                20.0), // Borda arredondada
+                            borderRadius: BorderRadius.circular(20.0), // Borda arredondada
                             child: Image.asset(
-                              'assets/usp.png',
+                              'assets/img/usp.png',
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          width: 10,
-                        ), // Espaço entre o Container e o Texto
                         Container(
-                          width: 130.0,
-                          decoration: const BoxDecoration(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(20.0),
-                              bottomLeft: Radius.circular(20.0),
-                              topRight: Radius.circular(20.0),
-                              topLeft: Radius.circular(20.0),
-                            ),
-                          ),
-                          margin: const EdgeInsets.only(
-                              bottom: 100.0, left: 110.0), // Margem do texto
-                          child: const Text(
-                            '  Comentários:  ',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
+                          width: 200.0,
+                          margin: const EdgeInsets.only(left: 5.0), // Espaço entre as imagens
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20.0), // Borda arredondada
+                            child: Image.asset(
+                              'assets/img/campus1.jpg', // Substitua com o caminho da sua nova imagem
                             ),
                           ),
                         ),
                       ],
                     ),
                     Container(),
-                    Container(
-                      width: 100.0,
-                      decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
-                        ),
-                      ),
-                      margin: const EdgeInsets.only(
-                          bottom: 80.0, left: 300.0), // Margem do texto
-                      child: const Text(
-                        '  Ver Mais:',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),

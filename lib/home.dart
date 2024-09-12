@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
           children: [
             Container(
               child: Image.asset(
-                'assets/login.png', // Substitua pelo caminho da sua imagem
+                'assets/img/login.png', // Substitua pelo caminho da sua imagem
                 width: double.infinity,
                 height: 450,
               ),
@@ -87,7 +87,7 @@ class Home extends StatelessWidget {
                 );
               },
               child: Image.asset(
-                'assets/prosseguir.png',
+                'assets/img/prosseguir.png',
               ),
             ),
           ],

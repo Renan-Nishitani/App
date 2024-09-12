@@ -4,7 +4,6 @@ import 'package:appuni2day/facul2.dart';
 import 'package:appuni2day/login.dart';
 import 'package:appuni2day/facul3.dart';
 import 'package:appuni2day/facul4.dart';
-import 'package:appuni2day/cadastro.dart';
 import 'package:appuni2day/home.dart';
 
 const IconData home = IconData(0xe318, fontFamily: 'MaterialIcons');
@@ -57,7 +56,7 @@ class MainApp extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.0), // Adicionando uma quebra de linha
-                  Text(
+                  const Text(
                     'Universidades',
                     style: TextStyle(
                       fontSize: 40.0, // Tamanho do texto
@@ -66,7 +65,7 @@ class MainApp extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.0), // Adicionando uma quebra de linha
-                  Text(
+                  const Text(
                     'De São Paulo',
                     style: TextStyle(
                       fontSize: 40.0, // Tamanho do texto
@@ -96,7 +95,7 @@ class MainApp extends StatelessWidget {
                           );
                         },
                         child: Image.asset(
-                          'assets/usp.png',
+                          'assets/img/usp.png',
                           width: 200,
                           height: 100,
                         ),
@@ -114,7 +113,7 @@ class MainApp extends StatelessWidget {
                           );
                         },
                         child: Image.asset(
-                          'assets/pucsp.png', // Caminho para a segunda imagem
+                          'assets/img/pucsp.png', // Caminho para a segunda imagem
                           width: 200, // Largura da imagem
                           height: 100, // Altura da imagem
                         ),
@@ -137,7 +136,7 @@ class MainApp extends StatelessWidget {
                           );
                         },
                         child: Image.asset(
-                          'assets/unesp.jpg', // Caminho para a terceira imagem
+                          'assets/img/unesp.jpg', // Caminho para a terceira imagem
                           width: 200, // Largura da imagem
                           height: 100, // Altura da imagem
                         ),
@@ -155,7 +154,7 @@ class MainApp extends StatelessWidget {
                           );
                         },
                         child: Image.asset(
-                          'assets/mackenzie.jpg', // Caminho para a quarta imagem
+                          'assets/img/mackenzie.jpg', // Caminho para a quarta imagem
                           width: 200, // Largura da imagem
                           height: 100, // Altura da imagem
                         ),

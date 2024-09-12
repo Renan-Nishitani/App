@@ -35,7 +35,7 @@ class _LoginState extends State<Login> {
           children: [
             Container(
               child: Image.asset(
-                'assets/login.png', // Replace with your image path
+                'assets/img/login.png', // Replace with your image path
                 width: double.infinity,
                 height: 300.0,
               ),

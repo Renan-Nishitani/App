@@ -23,10 +23,11 @@ class Facul2 extends StatelessWidget {
                 padding: EdgeInsets.zero, // Removendo o espaçamento interno
                 alignment: Alignment.topCenter,
                 width: 460.0,
-
                 // Alinha o conteúdo ao centro
                 child: Column(
                   children: [
+                    const SizedBox(
+                        height: 40),
                     const Text(
                       'PUC',
                       style: TextStyle(
@@ -36,7 +37,7 @@ class Facul2 extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                        height: 10), // Adicionando um espaço entre os textos
+                        height: 20), // Adicionando um espaço entre os textos
                     const Text(
                       'A Pontifícia Universidade Católica, mais conhecida como PUC, é uma instituição de ensino superior reconhecida pela sua excelência acadêmica e compromisso com os valores humanos e éticos. Com campos espalhados por várias cidades brasileiras, a PUC se destaca pela qualidade de seu corpo docente, composto por professores renomados e pesquisadores de destaque em seus campos de atuação. A PUC também valoriza a formação integral dos seus estudantes, buscando não apenas o desenvolvimento acadêmico, mas também o crescimento pessoal e o engajamento social. Por meio de programas de extensão universitária, projetos comunitários e atividades extracurriculares, a universidade incentiva o protagonismo dos alunos e sua contribuição para a sociedade.',
                       textAlign: TextAlign.justify,
@@ -55,58 +56,16 @@ class Facul2 extends StatelessWidget {
                             borderRadius: BorderRadius.circular(
                                 20.0), // Borda arredondada
                             child: Image.asset(
-                              'assets/pucsp.png',
+                              'assets/img/pucsp.png',
                             ),
                           ),
                         ),
                         const SizedBox(
                           width: 10,
-                        ), // Espaço entre o Container e o Texto
-                        Container(
-                          width: 130.0,
-                          decoration: const BoxDecoration(
-                            color: Color(0xff3f78b6),
-                            borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(20.0),
-                              bottomLeft: Radius.circular(20.0),
-                              topRight: Radius.circular(20.0),
-                              topLeft: Radius.circular(20.0),
-                            ),
-                          ),
-                          margin: const EdgeInsets.only(
-                              bottom: 154.0, left: 110.0), // Margem do texto
-                          child: const Text(
-                            '  Comentários:  ',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
+                        ), // Espaço entre o Container e o Texto  
                       ],
                     ),
                     Container(),
-                    Container(
-                      width: 100.0,
-                      decoration: const BoxDecoration(
-                        color: Color(0xff3f78b6),
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
-                        ),
-                      ),
-                      margin: const EdgeInsets.only(
-                          bottom: 80.0, left: 300.0), // Margem do texto
-                      child: const Text(
-                        '  Ver Mais:',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
