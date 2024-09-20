@@ -31,142 +31,141 @@ class MainApp extends StatelessWidget {
           backgroundColor: const Color(0xff172a3a), // Cor de fundo da AppBar
         ),
         backgroundColor: const Color(0xfffcfefe), // Cor de fundo do body
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const SizedBox(height: 70.0),
-            Center(
-              child: Column(
-                children: [
-                  Text(
-                    'Você se logou como: $nomeUsuario',
-                    style: const TextStyle(
-                      fontSize: 24.0, // Tamanho do texto
-                      fontWeight: FontWeight.bold, // Negrito
-                      color: Color(0xff172a3a), // Cor do texto
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 70.0),
+              Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Você se logou como: $nomeUsuario',
+                      style: const TextStyle(
+                        fontSize: 24.0, // Tamanho do texto
+                        fontWeight: FontWeight.bold, // Negrito
+                        color: Color(0xff172a3a), // Cor do texto
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 20.0),
-                  const Text(
-                    '4 Principais',
-                    style: TextStyle(
-                      fontSize: 40.0, // Tamanho do texto
-                      fontWeight: FontWeight.bold, // Negrito
-                      color: Colors.black, // Cor do texto
+                    SizedBox(height: 20.0),
+                    const Text(
+                      '4 Principais',
+                      style: TextStyle(
+                        fontSize: 40.0, // Tamanho do texto
+                        fontWeight: FontWeight.bold, // Negrito
+                        color: Colors.black, // Cor do texto
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 10.0), // Adicionando uma quebra de linha
-                  const Text(
-                    'Universidades',
-                    style: TextStyle(
-                      fontSize: 40.0, // Tamanho do texto
-                      fontWeight: FontWeight.bold, // Negrito
-                      color: Colors.black, // Cor do texto
+                    SizedBox(height: 10.0), // Adicionando uma quebra de linha
+                    const Text(
+                      'Universidades',
+                      style: TextStyle(
+                        fontSize: 40.0, // Tamanho do texto
+                        fontWeight: FontWeight.bold, // Negrito
+                        color: Colors.black, // Cor do texto
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 10.0), // Adicionando uma quebra de linha
-                  const Text(
-                    'De São Paulo',
-                    style: TextStyle(
-                      fontSize: 40.0, // Tamanho do texto
-                      fontWeight: FontWeight.bold, // Negrito
-                      color: Colors.black, // Cor do texto
+                    SizedBox(height: 10.0), // Adicionando uma quebra de linha
+                    const Text(
+                      'De São Paulo',
+                      style: TextStyle(
+                        fontSize: 40.0, // Tamanho do texto
+                        fontWeight: FontWeight.bold, // Negrito
+                        color: Colors.black, // Cor do texto
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-                height:
-                    100.0), // Adicionando espaçamento entre o texto e os botões
-            Center(
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Facul1(),
-                            ),
-                          );
-                        },
-                        child: Image.asset(
-                          'assets/img/usp.png',
-                          width: 200,
-                          height: 100,
+              SizedBox(
+                  height:
+                      100.0), // Adicionando espaçamento entre o texto e os botões
+              Center(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Facul1(),
+                              ),
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/img/uspMenu.png',
+                            width: 200,
+                            height: 100,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                          width:
-                              20), // Adicionando espaçamento entre as imagens
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Facul2(),
-                            ),
-                          );
-                        },
-                        child: Image.asset(
-                          'assets/img/pucsp.png', // Caminho para a segunda imagem
-                          width: 200, // Largura da imagem
-                          height: 100, // Altura da imagem
+                        SizedBox(
+                            width:
+                                20), // Adicionando espaçamento entre as imagens
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Facul2(),
+                              ),
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/img/pucMenu.png',
+                            width: 200,
+                            height: 100,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                      height:
-                          100), // Adicionando espaçamento entre as linhas de imagens
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Facul3(),
-                            ),
-                          );
-                        },
-                        child: Image.asset(
-                          'assets/img/unesp.jpg', // Caminho para a terceira imagem
-                          width: 200, // Largura da imagem
-                          height: 100, // Altura da imagem
+                      ],
+                    ),
+                    SizedBox(height: 20.0), // Adicionando espaçamento entre as imagens
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Facul3(),
+                              ),
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/img/vunespMenu.png',
+                            width: 200,
+                            height: 100,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                          width:
-                              20), // Adicionando espaçamento entre as imagens
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Facul4(),
-                            ),
-                          );
-                        },
-                        child: Image.asset(
-                          'assets/img/mackenzie.jpg', // Caminho para a quarta imagem
-                          width: 200, // Largura da imagem
-                          height: 100, // Altura da imagem
+                        SizedBox(
+                            width:
+                                20), // Adicionando espaçamento entre as imagens
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Facul4(),
+                              ),
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/img/mackMenu.png',
+                            width: 200,
+                            height: 100,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-        // Texto fora da AppBar
         bottomNavigationBar: Container(
           color: const Color(0xff172a3a), // Cor igual a da AppBar
           padding: const EdgeInsets.all(20.0),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:appuni2day/login.dart';
 
-
 const IconData home = IconData(0xe318, fontFamily: 'MaterialIcons');
 
 class Cadastro extends StatelessWidget {
@@ -11,21 +10,20 @@ class Cadastro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xfffcfefe),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             Container(
+              color: Color(0xff172a3a),
               child: Image.asset(
-                'assets/img/login.png', // Substitua pelo caminho da sua imagem
+                'assets/img/login.png', // Imagem
                 width: double.infinity,
                 height: 300.0,
               ),
-              color: Color(0xff172a3a),
             ),
-
-            SizedBox(height: 70.0),
-            Text(
+            const SizedBox(height: 70.0),
+            const Text(
               'Cadastro',
               style: TextStyle(
                 fontSize: 30,
@@ -33,44 +31,41 @@ class Cadastro extends StatelessWidget {
                 color: Color(0xff172a3a),
               ),
             ),
-
             const SizedBox(height: 60.0),
             // Caixa de texto para o usuário
             TextFormField(
               decoration: InputDecoration(
-                icon: Icon(Icons.person),
+                icon: const Icon(Icons.person),
                 labelText: 'Inserir usuário',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
               ),
             ),
-
             const SizedBox(height: 20.0), // Espaçamento entre os campos
             // Caixa de texto para a senha
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
-                icon: Icon(Icons.lock),
+                icon: const Icon(Icons.lock),
                 labelText: 'Inserir senha',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
-                icon: Icon(Icons.lock_outline),
+                icon: const Icon(Icons.lock_outline),
                 labelText: 'Confirmar senha',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
               ),
             ),
-            const SizedBox(
-                height: 60.0), // Espaçamento entre os campos e o botão
+            const SizedBox(height: 60.0), // Espaçamento entre os campos e o botão
             // Botão de login
             ElevatedButton(
               onPressed: () {
@@ -82,7 +77,7 @@ class Cadastro extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xff172a3a),
+                backgroundColor: const Color(0xff172a3a),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
@@ -117,7 +112,7 @@ class Cadastro extends StatelessWidget {
 }
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: Cadastro(),
   ));
 }

@@ -12,85 +12,83 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff172a3a),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Container(
-              child: Image.asset(
-                'assets/img/login.png', // Substitua pelo caminho da sua imagem
-                width: double.infinity,
-                height: 450,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Container(
+                child: Image.asset(
+                  'assets/img/login.png', // Substitua pelo caminho da sua imagem
+                  width: double.infinity,
+                  height: 450,
+                ),
+                color: Color(0xff172a3a),
               ),
-              color: Color(0xff172a3a),
-            ),
-
-            Text(
-              'Seja bem-vindo(a)',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 255, 255, 255),
-              ),
-            ),
-
-            const SizedBox(
-                height: 30.0), // Espaçamento entre os campos e o botão
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Cadastro()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                shape: RoundedRectangleBorder(),
-              ),
-              child: const Text(
-                'Cadastrar',
+              Text(
+                'Seja bem-vindo(a)',
                 style: TextStyle(
-                  color: Color(0xff172a3a),
-                  fontSize: 30.0, // Tamanho da fonte
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
-            ),
-            const SizedBox(height: 10.0),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Login()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                shape: RoundedRectangleBorder(),
-              ),
-              child: const Text(
-                'Login',
-                style: TextStyle(
-                  color: Color(0xff172a3a),
-                  fontSize: 30.0,
-                  // Tamanho da fonte
+              const SizedBox(height: 30.0), // Espaçamento entre os campos e o botão
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cadastro()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                  shape: RoundedRectangleBorder(),
                 ),
-              ),
-            ),
-            const SizedBox(height: 40.0),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MainApp(),
+                child: const Text(
+                  'Cadastrar',
+                  style: TextStyle(
+                    color: Color(0xff172a3a),
+                    fontSize: 30.0, // Tamanho da fonte
                   ),
-                );
-              },
-              child: Image.asset(
-                'assets/img/prosseguir.png',
+                ),
               ),
-            ),
-          ],
+              const SizedBox(height: 10.0),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                  shape: RoundedRectangleBorder(),
+                ),
+                child: const Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Color(0xff172a3a),
+                    fontSize: 30.0, // Tamanho da fonte
+                  ),
+                ),
+              ),
+              const SizedBox(height: 40.0),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MainApp(),
+                    ),
+                  );
+                },
+                child: Image.asset(
+                  'assets/img/prosseguir.png',
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
