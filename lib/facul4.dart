@@ -1,3 +1,4 @@
+import 'package:appuni2day/mackCursos.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart'; // Import para utilizar abertura de link do botão
 
@@ -130,9 +131,14 @@ class Facul4 extends StatelessWidget {
                         const SizedBox(height: 20.0),
                         SizedBox(
                           width: 300, // Largura fixa dos botões
-                          child: ElevatedButton(
+                           child: ElevatedButton(
                             onPressed: () {
-                              // Ação do terceiro botão
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => MackCursos(),
+                                ),
+                              );
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color(0xffe3032d), // Cor de fundo
@@ -142,7 +148,7 @@ class Facul4 extends StatelessWidget {
                                 horizontal: 30.0,
                               ),
                               textStyle: const TextStyle(
-                                fontSize: 25.0,
+                                fontSize: 23.0,
                                 fontWeight: FontWeight.bold // Tamanho da fonte
                               ),
                             ),

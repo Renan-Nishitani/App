@@ -1,3 +1,4 @@
+import 'package:appuni2day/unespCursos.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -130,9 +131,14 @@ class Facul3 extends StatelessWidget { // UNESP
                         const SizedBox(height: 20.0),
                         SizedBox(
                           width: 300, // Largura fixa dos botões
-                          child: ElevatedButton(
+                           child: ElevatedButton(
                             onPressed: () {
-                              // Espaço pra ação do botão
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => UnespCursos(),
+                                ),
+                              );
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color(0xff0572ae), // Cor de fundo
@@ -142,7 +148,7 @@ class Facul3 extends StatelessWidget { // UNESP
                                 horizontal: 30.0,
                               ),
                               textStyle: const TextStyle(
-                                fontSize: 25.0,
+                                fontSize: 23.0,
                                 fontWeight: FontWeight.bold // Tamanho da fonte
                               ),
                             ),

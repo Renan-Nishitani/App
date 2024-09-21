@@ -1,3 +1,4 @@
+import 'package:appuni2day/uspCursos.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart'; // Import para utilizar abertura de link do botão
 
@@ -130,9 +131,14 @@ class Facul1 extends StatelessWidget {
                         const SizedBox(height: 20.0),
                         SizedBox(
                           width: 300, // Largura dos botões
-                          child: ElevatedButton(
+                           child: ElevatedButton(
                             onPressed: () {
-                              // Ação do botão
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => UspCursos(),
+                                ),
+                              );
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black, // Cor de fundo
